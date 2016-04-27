@@ -1,0 +1,10 @@
+body{
+	background : url("../images/bg.jpg");
+}
+#body {
+	width:97%; 
+	height:700px; 
+	padding:0px;
+	margin:0px;
+}
+
