@@ -1,0 +1,37 @@
+#notes_space > div {
+    background-color: #B0E0E6;
+    width: 30%;
+    float: left;
+    margin: 15PX 15PX 15PX 0;
+   
+}
+
+#trash_space > div {
+    background-color: #faebd7;
+    width: 30%;
+    float: left;
+    margin: 15PX 15PX 15PX 0;
+}
+
+#list_space > div {
+    background-color: #faebd7;
+    width: 30%;
+    float: left;
+    margin: 15PX 15PX 15PX 0;
+}
+
+#done_task{
+    text-decoration: line-through;
+    background-color: #faebd7;
+    width: 30%;
+    float: left;
+    margin: 15PX 15PX 15PX 0;
+}
+
+#todo_notes {
+	display: none
+}
+
+#todo_list {
+	display: none
+}

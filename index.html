@@ -1,27 +1,56 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	 <script src="js/jquery-1.10.2.min.js"></script>
-	 <script src="js/Todo.js"></script>
-	 <link rel="stylesheet" href="css/TodoStyle.css">
+	<script src="./js/todo.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	 <link rel="stylesheet" href="css/style.css">
+	<script>
+	$(document).ready(function() {
+	$("#notes").click(function(){
+		$("#todo_notes").show()
+		$("#todo_list").hide()
+		$("#list_space").hide()
+	})
 
+	$("#list").click(function(){
+		$("#todo_list").show()
+		$("#todo_notes").hide()
+		$("#notes_space").hide()
+	})
+	$("#trash").click(function(){
+		$("#notes_space").hide();
+		$("#trash_space").show();
+		$("#list_space").hide();
+		showTrash();
+	})
 
+	$("#notes_1").click(function(){
+		$("#trash_space").hide();
+		$("#notes_space").show();
+		showTodos();	
+	})
+});
+</script>
 </head>
 <body>
-
-<form name="Todo">
-
-	<div id="SimpleNotes" >
-		<h2>Add Your Note</h2>
-		<input id="title" type="text" name = "title" placeholder = "Enter title"/>
-		<textarea id="desc" name="notes" rows="5", cols"40" placeholder="Add Note"></textarea>
-		<input type="button" value="Done" onclick="createNewNote()"/>
+<a href="#" id="notes">Todo Note</a>
+<a href="#" id="list">Todo List</a>
+<form>
+	<div id="todo_notes">
+	<input type="text" id="note" name="note" placeholder = "Add Note.">
+	<input type="button" id="add" value="Add" name="add" onclick="addNotes()"/>	
+	<input type="button" id="trash" value="Trash" name="trash" />
+	<input type="button" id="notes_1" value="TodoNotes" name="notes" />
 	</div>
-	
-	<div id="notes">
+	<div id="todo_list" >
+		<input type="text" id="list_note" name="list" placeholder = "AddList" />
+		<input type = "button" value="Add" onclick="addList()" />
 	</div>
 </form>
-</div>
-</body>
+</form>
+	<div id="notes_space" ></div>
+	<div id="done_task" ></div>
+	<div id="list_space" ></div>
+	<div id="trash_space"></div>
 </html>
+</body>
+
